@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    border: 0;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.conteiner{
+
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    background:linear-gradient(rgb(113, 202, 250), rgb(239, 242, 244));
+    position: relative;
+    overflow: hidden;
+}
+.contador{
+    position: absolute;
+    font-size: 30px;
+    right: 40px;
+    top: 40px;
+}
+.start{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: black;
+    position: absolute;
+    opacity: 0.8;
+    z-index: 3;
+    display: block;
+}
+.pressStart{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: 9px 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(252, 248, 248);
+    border-radius: 10px;
+    
+    
+}
+section > div > p{
+    text-align: center;
+    margin: auto;
+    display: block;
+    color: white;
+}
+@keyframes animationStart {
+    0%{
+        opacity: 1.0;
+    }
+    50%{
+        opacity: 0.1;
+    }
+
+    100%{
+        opacity: 1.0;
+    }
+}
+.grama{
+    height: 34px;
+    width: 100vw;
+    bottom: 0;
+    margin: auto;
+    background-color: rgb(113, 238, 113);
+    position: absolute;
+    
+}
+.obstacle{
+    width: 100px;
+    height: 180px;
+    position: absolute;
+    margin-bottom: 20px;
+    bottom: -66px;
+    left: -100;
+    z-index: 1;
+   
+}
+.panda{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 34px;
+    left: 150px;
+
+   
+}
+.pandaAnimation{
+    animation: pandaAN 0.7s linear infinite;
+}
+@keyframes obtAN{
+    0%{
+        right:-50px
+    }
+    100%{
+        right: 100%;
+    }
+}
+@keyframes pandaAN{
+    0%{
+        bottom:34px;
+    }
+    40%{
+        bottom: 144px;
+    }
+    50%{
+        bottom:154px ;
+    }
+    100%{
+        bottom: 34px;
+    }
+}
+/* Se a tela tiver uma largura menor ou igual a 1000px 
+aplica alguns valores diferentes para melhor funcionamento 
+em dispositivos menores*/
+@media only screen and (max-width: 1000px){
+
+    .grama{
+        height: 27px;
+        width: 100vw;
+        bottom: 0;
+        margin: auto;
+        background-color: rgb(113, 238, 113);
+        position: absolute;
+        
+    }
+    .obstacle{
+        width: 80px;
+        height: 150px;
+        position: absolute;
+        margin-bottom: 20px;
+        bottom: -66px;
+        z-index: 1;
+       
+    }
+    .panda{
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        bottom: 27px;
+        left: 125px;
+        
+    
+       
+    }
+    .pandaAnimation{
+        animation: pandaAN 0.7s linear infinite;
+    }
+  
+    @keyframes pandaAN{
+        0%{
+            bottom:27px;
+        }
+        40%{
+            bottom: 120px;
+        }
+        50%{
+            bottom:125px ;
+        }
+        100%{
+            bottom: 27px;
+        }
+    }
+}
