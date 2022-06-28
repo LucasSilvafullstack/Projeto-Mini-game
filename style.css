@@ -135,7 +135,7 @@ section>div>p {
     }
 }
 
-/* Se a tela tiver uma largura menor ou igual a 700px 
+/* Se a tela tiver uma largura menor ou igual a 500px 
 aplica alguns valores diferentes para melhor funcionamento 
 em dispositivos menores*/
 @media only screen and (max-height: 500px) {
