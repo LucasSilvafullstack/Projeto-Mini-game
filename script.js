@@ -18,9 +18,10 @@ $iniciar.addEventListener('click', () => {
 
         const obstacle = $obstacle.offsetLeft;
         const panda = +window.getComputedStyle($panda).bottom.replace('px', '')
-        let tamanhoTela = +screen.height
+        let tamanhoTela = screen.height
+        
         // verifica se a tela tem altura menor que 700px
-        if (tamanhoTela < 701) {
+        if (tamanhoTela < 501) {
 
             // função para o panda pular com o click 
             $conteiner.addEventListener('click', () => {
