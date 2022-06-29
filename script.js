@@ -24,7 +24,7 @@ $iniciar.addEventListener('click', () => {
         if (tamanhoTela < 501) {
 
             // função para o panda pular com o click 
-            $conteiner.addEventListener('click', () => {
+            $conteiner.addEventListener('mousedown', () => {
                 $panda.classList.add('pandaAnimation')
                 setTimeout(() => {
                     $panda.classList.remove('pandaAnimation')
