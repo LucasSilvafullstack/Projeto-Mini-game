@@ -6,11 +6,12 @@ const junpPanda = +window.getComputedStyle($panda).bottom.replace('px', '')
 let play = document.querySelector('.start')
 const $iniciar = document.querySelector('.pressStart')
 let a = b = c = d = e = f = g = 0
-
+$obstacle.style.display = 'none'
 
 // inicia a animação do tronco quando o botão "Start" é clicado
 $iniciar.addEventListener('click', () => {
     play.style.display = 'none'
+    $obstacle.style.display = 'block'
     $obstacle.style.animation = 'obtAN 2.5s linear infinite'
 
     // loop para verifica se o jogador perdeu
@@ -84,47 +85,13 @@ $iniciar.addEventListener('click', () => {
             }
         }
     }, 10)
-    // Loop para contar pontos
+    // Loop para contar pontos 
+    let pontos = 0
     const contador = setInterval(() => {
+        pontos++
+        
+        $contador.textContent = `${pontos}`
 
-        // ifs para fazer o contador de pontos
-        a++
-        if (a === 9) {
-            a = 0
-            b++
-        }
-
-        if (b === 9) {
-            b = 0
-            c++
-        }
-
-        if (c === 9) {
-            c = 0
-            d++
-        }
-
-        if (d === 9) {
-            d = 0
-            e++
-        }
-
-        if (e === 9) {
-            e = 0
-            f++
-        }
-
-        if (f === 9) {
-            f = 0
-            g++
-        }
-        if (g === 9) {
-
-        }
-        $contador.textContent = `${g}${f}${e}${d}${c}${b}${a}`
-
-    }, 30)
-
+    }, 50)
 
 })
-
