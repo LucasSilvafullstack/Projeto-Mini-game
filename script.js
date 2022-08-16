@@ -23,7 +23,7 @@ $iniciar.addEventListener('click', () => {
         
         // verifica se a tela tem altura menor que 500px
         if (tamanhoTela < 501) {
-
+            $obstacle.style.animation = 'obtAN 1.8s linear infinite'
             // função para o panda pular com o click 
             $conteiner.addEventListener('mousedown', () => {
                 $panda.classList.add('pandaAnimation')
@@ -51,7 +51,8 @@ $iniciar.addEventListener('click', () => {
             }
 
         } else {
-
+            
+            
             // Função para o panda pular quando preciona a tecla Space/Espaço
             const pulopanda = document.addEventListener('keypress', event => {
 

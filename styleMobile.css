@@ -1,0 +1,66 @@
+/* Se a tela tiver uma largura menor ou igual a 500px 
+aplica alguns valores diferentes para melhor funcionamento 
+em dispositivos menores*/
+@media only screen and (max-height: 500px) {
+
+    .conteiner {
+
+        height: 95vh;
+    }
+    .instrucion {
+        display: none;
+    }
+
+    .grama {
+        height: 27px;
+        width: 100vw;
+        bottom: 0;
+        margin: auto;
+        background-color: rgb(113, 238, 113);
+        position: absolute;
+
+    }
+
+    .obstacle {
+        width: 80px;
+        height: 150px;
+        position: absolute;
+        margin-bottom: 20px;
+        bottom: -66px;
+        z-index: 1;
+
+    }
+
+    .panda {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        bottom: 27px;
+        left: 125px;
+
+
+
+    }
+
+    .pandaAnimation {
+        animation: pandaAN 0.7s linear infinite;
+    }
+
+    @keyframes pandaAN {
+        0% {
+            bottom: 27px;
+        }
+
+        40% {
+            bottom: 120px;
+        }
+
+        50% {
+            bottom: 125px;
+        }
+
+        100% {
+            bottom: 27px;
+        }
+    }
+}
